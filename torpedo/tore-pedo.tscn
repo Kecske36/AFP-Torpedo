@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctkyeki68skhk"]
+
+[ext_resource type="Texture2D" uid="uid://w1l40xi4mydn" path="res://image (1).png" id="1_fxsl6"]
+[ext_resource type="Texture2D" uid="uid://whi20bg4yoxm" path="res://image (2).png" id="2_oln6y"]
+
+[node name="Node2D" type="Node2D" unique_id=939744826]
+position = Vector2(54, 41)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=356952502]
+offset_left = -412.0
+offset_top = -285.0
+offset_right = 294.0
+offset_bottom = 412.0
+texture = ExtResource("1_fxsl6")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=864753249]
+position = Vector2(365, 333)
+scale = Vector2(0.2973761, 0.2973761)
+texture = ExtResource("2_oln6y")
