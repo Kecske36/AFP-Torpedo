@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w1l40xi4mydn"
-path="res://.godot/imported/image (1).png-ec79ee2b76d462a48409254afc84e3b3.ctex"
+uid="uid://drmwhfhxobsky"
+path="res://.godot/imported/kis hajó.png-fae985ed894c039c342dc10ebbd97269.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image (1).png"
-dest_files=["res://.godot/imported/image (1).png-ec79ee2b76d462a48409254afc84e3b3.ctex"]
+source_file="res://images/kis hajó.png"
+dest_files=["res://.godot/imported/kis hajó.png-fae985ed894c039c342dc10ebbd97269.ctex"]
 
 [params]
 

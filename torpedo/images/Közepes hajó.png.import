@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whi20bg4yoxm"
-path="res://.godot/imported/image (2).png-c05fea794236fe4c8471bd2fadda4f5e.ctex"
+uid="uid://y6iclaft60aa"
+path="res://.godot/imported/Közepes hajó.png-bf1a805bd505b0b14b8733e892a64b61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image (2).png"
-dest_files=["res://.godot/imported/image (2).png-c05fea794236fe4c8471bd2fadda4f5e.ctex"]
+source_file="res://images/Közepes hajó.png"
+dest_files=["res://.godot/imported/Közepes hajó.png-bf1a805bd505b0b14b8733e892a64b61.ctex"]
 
 [params]
 
