@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c1fbmiw05xcrk"]
+
+[ext_resource type="Script" uid="uid://t8pwidwldxd1" path="res://Scripts/CharacterBody2d.cs" id="1_51g82"]
+[ext_resource type="Texture2D" uid="uid://boetxdj2damss" path="res://icon.svg" id="2_chgbb"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_chgbb"]
+script/source = "using Godot;
+using System;
+
+public partial class Player : CharacterBody2D
+{
+    [Export]
+    public float Speed = 200f;
+
+    private Vector2 targetPosition;
+
+    public override void _Ready()
+    {
+        targetPosition = GlobalPosition;
+    }
+
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event is InputEventMouseButton mouseButton)
+        {
+            if (mouseButton.Pressed && mouseButton.ButtonIndex == MouseButton.Left)
+            {
+                targetPosition = mouseButton.Position;
+            }
+        }
+    }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        Vector2 direction = targetPosition - GlobalPosition;
+
+        if (direction.Length() > 5)
+        {
+            Velocity = direction.Normalized() * Speed;
+            MoveAndSlide();
+        }
+        else
+        {
+            Velocity = Vector2.Zero;
+        }
+    }
+}"
+
+[node name="Moveteszt" type="Node2D" unique_id=1936552462]
+script = SubResource("CSharpScript_chgbb")
+
+[node name="Moveteszt_" type="CharacterBody2D" parent="." unique_id=148441168]
+script = ExtResource("1_51g82")
+
+[node name="Sprite2D" type="Sprite2D" parent="Moveteszt_" unique_id=450079428]
+position = Vector2(876, 491)
+texture = ExtResource("2_chgbb")
