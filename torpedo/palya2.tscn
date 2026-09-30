@@ -1,0 +1,516 @@
+[gd_scene format=3 uid="uid://dgj2jwandtswd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
+bg_color = Color(0.1680183, 0.1680183, 0.13335153, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="GridContainer" type="GridContainer" unique_id=162330002]
+offset_left = 8.0
+offset_top = 25.0
+offset_right = 1044.0
+offset_bottom = 1061.0
+columns = 10
+
+[node name="Panel" type="Panel" parent="." unique_id=1671176201]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1632889535]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel3" type="Panel" parent="." unique_id=425730483]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel4" type="Panel" parent="." unique_id=1102560212]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel5" type="Panel" parent="." unique_id=1441054045]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel6" type="Panel" parent="." unique_id=1931058051]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel7" type="Panel" parent="." unique_id=1873453794]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel8" type="Panel" parent="." unique_id=474106672]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel9" type="Panel" parent="." unique_id=2039195429]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel10" type="Panel" parent="." unique_id=123779996]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel11" type="Panel" parent="." unique_id=256611733]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel12" type="Panel" parent="." unique_id=1964924557]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel13" type="Panel" parent="." unique_id=412019233]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel14" type="Panel" parent="." unique_id=1201876996]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel15" type="Panel" parent="." unique_id=5543034]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel16" type="Panel" parent="." unique_id=483293735]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel17" type="Panel" parent="." unique_id=1104149347]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel18" type="Panel" parent="." unique_id=1327571531]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel19" type="Panel" parent="." unique_id=35683641]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel20" type="Panel" parent="." unique_id=338484902]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel21" type="Panel" parent="." unique_id=1338757933]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel22" type="Panel" parent="." unique_id=1215960743]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel23" type="Panel" parent="." unique_id=1543273626]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel24" type="Panel" parent="." unique_id=2070437351]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel25" type="Panel" parent="." unique_id=1182102660]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel26" type="Panel" parent="." unique_id=1769072828]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel27" type="Panel" parent="." unique_id=133838765]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel28" type="Panel" parent="." unique_id=1345757619]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel29" type="Panel" parent="." unique_id=1251355980]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel30" type="Panel" parent="." unique_id=1971093018]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel31" type="Panel" parent="." unique_id=262395354]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel32" type="Panel" parent="." unique_id=1211050881]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel33" type="Panel" parent="." unique_id=477855443]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel34" type="Panel" parent="." unique_id=2061944679]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel35" type="Panel" parent="." unique_id=87398280]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel36" type="Panel" parent="." unique_id=459083669]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel37" type="Panel" parent="." unique_id=2010096739]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel38" type="Panel" parent="." unique_id=109775361]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel39" type="Panel" parent="." unique_id=2036729924]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel40" type="Panel" parent="." unique_id=668605063]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel41" type="Panel" parent="." unique_id=771324049]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel42" type="Panel" parent="." unique_id=1630671331]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel43" type="Panel" parent="." unique_id=870482800]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel44" type="Panel" parent="." unique_id=446286004]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel45" type="Panel" parent="." unique_id=652282759]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel46" type="Panel" parent="." unique_id=510068530]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel47" type="Panel" parent="." unique_id=1426543976]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel48" type="Panel" parent="." unique_id=1199219029]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel49" type="Panel" parent="." unique_id=1684494119]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel50" type="Panel" parent="." unique_id=1515480663]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel51" type="Panel" parent="." unique_id=1168103240]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel52" type="Panel" parent="." unique_id=868161579]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel53" type="Panel" parent="." unique_id=482086902]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel54" type="Panel" parent="." unique_id=78801815]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel55" type="Panel" parent="." unique_id=497124882]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel56" type="Panel" parent="." unique_id=433865728]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel57" type="Panel" parent="." unique_id=759162375]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel58" type="Panel" parent="." unique_id=1785246090]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel59" type="Panel" parent="." unique_id=179187684]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel60" type="Panel" parent="." unique_id=424134894]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel61" type="Panel" parent="." unique_id=863634552]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel62" type="Panel" parent="." unique_id=549616017]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel63" type="Panel" parent="." unique_id=800758824]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel64" type="Panel" parent="." unique_id=544034773]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel65" type="Panel" parent="." unique_id=232155108]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel66" type="Panel" parent="." unique_id=361383035]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel67" type="Panel" parent="." unique_id=2118609669]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel68" type="Panel" parent="." unique_id=515466491]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel69" type="Panel" parent="." unique_id=1064609961]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel70" type="Panel" parent="." unique_id=1542173655]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel71" type="Panel" parent="." unique_id=1787701495]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel72" type="Panel" parent="." unique_id=1865940325]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel73" type="Panel" parent="." unique_id=66700701]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel74" type="Panel" parent="." unique_id=380778259]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel75" type="Panel" parent="." unique_id=1712508072]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel76" type="Panel" parent="." unique_id=2112582975]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel77" type="Panel" parent="." unique_id=1664916457]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel78" type="Panel" parent="." unique_id=1365802810]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel79" type="Panel" parent="." unique_id=1867598095]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel80" type="Panel" parent="." unique_id=322879839]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel81" type="Panel" parent="." unique_id=1807978358]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel82" type="Panel" parent="." unique_id=56691556]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel83" type="Panel" parent="." unique_id=2112949584]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel84" type="Panel" parent="." unique_id=1539415273]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel85" type="Panel" parent="." unique_id=97558973]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel86" type="Panel" parent="." unique_id=1613732468]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel87" type="Panel" parent="." unique_id=31889269]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel88" type="Panel" parent="." unique_id=1965712518]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel89" type="Panel" parent="." unique_id=627935620]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel90" type="Panel" parent="." unique_id=1488325866]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel91" type="Panel" parent="." unique_id=1961462118]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel92" type="Panel" parent="." unique_id=796399436]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel93" type="Panel" parent="." unique_id=614929768]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel94" type="Panel" parent="." unique_id=1662766718]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel95" type="Panel" parent="." unique_id=913236226]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel96" type="Panel" parent="." unique_id=90731584]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel97" type="Panel" parent="." unique_id=1647660198]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel98" type="Panel" parent="." unique_id=394026454]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel99" type="Panel" parent="." unique_id=2131593842]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
+
+[node name="Panel100" type="Panel" parent="." unique_id=471050235]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")

@@ -3,21 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_t6d61"]
 [ext_resource type="Script" uid="uid://bwy5cpf0yb1bx" path="res://TorpedoRacs.cs" id="2_p5sld"]
 
-[node name="Node2D" type="Node2D" unique_id=1764098448]
+[node name="Camera2D" type="Camera2D" unique_id=462166456]
+scale = Vector2(0.32000017, 0.32000017)
+anchor_mode = 0
 
 [node name="Hatter" type="TextureRect" parent="." unique_id=1486268055]
 offset_right = 6399.9966
 offset_bottom = 6399.9966
-scale = Vector2(0.32000017, 0.32000017)
+scale = Vector2(0.9995795, 0.9996368)
 texture = ExtResource("1_t6d61")
 
 [node name="UI" type="Control" parent="." unique_id=517003625]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+scale = Vector2(3.1236842, 3.1238635)
 
 [node name="Cellak" type="Panel" parent="UI" unique_id=104392707]
 layout_mode = 0
@@ -38,8 +37,8 @@ offset_right = 15.933186
 offset_bottom = -28.233696
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(11.710401, 55.66744)
-columns = 11
+scale = Vector2(36.698044, 174.91972)
+columns = 10
 script = ExtResource("2_p5sld")
 
 [node name="statusz" type="Label" parent="UI" unique_id=1652494071]
