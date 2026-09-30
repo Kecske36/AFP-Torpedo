@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://0myvtj5315uq"]
+[gd_scene format=3 uid="uid://dgj2jwandtswd"]
 
-[ext_resource type="Script" path="res://TorpedoRacs.cs" id="1_3euqa"]
+[ext_resource type="Script" uid="uid://bwy5cpf0yb1bx" path="res://TorpedoRacs.cs" id="1_3euqa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
 bg_color = Color(0.1680183, 0.1680183, 0.13335153, 0.5)
