@@ -14,12 +14,12 @@ offset_right = 2401.0
 offset_bottom = 2528.0
 texture = ExtResource("1_oln6y")
 
-[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=864753249]
+[node name="Big Ship" type="Sprite2D" parent="TextureRect" unique_id=864753249]
 position = Vector2(365, 333)
 scale = Vector2(0.2973761, 0.2973761)
 texture = ExtResource("2_67dv7")
 
-[node name="KisHajó" type="Sprite2D" parent="TextureRect" unique_id=323145710]
+[node name="Little Ship" type="Sprite2D" parent="TextureRect" unique_id=323145710]
 position = Vector2(691, 433)
 scale = Vector2(0.19189453, 0.19189453)
 texture = ExtResource("3_81l2m")
