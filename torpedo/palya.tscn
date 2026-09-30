@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://q6an1vlhtk5w"]
 
 [ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_t6d61"]
+[ext_resource type="Script" uid="uid://bwy5cpf0yb1bx" path="res://TorpedoRacs.cs" id="2_p5sld"]
 
 [node name="Node2D" type="Node2D" unique_id=1764098448]
 
@@ -28,6 +29,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(11.710401, 55.66744)
 columns = 11
+script = ExtResource("2_p5sld")
 
 [node name="statusz" type="Label" parent="UI" unique_id=1652494071]
 layout_mode = 0
