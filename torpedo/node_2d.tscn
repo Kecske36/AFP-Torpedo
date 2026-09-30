@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://n1x4mxhumcun"]
 
+[ext_resource type="Script" uid="uid://ebixvuv4jpl8" path="res://JatekKezelo.cs" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://dgj2jwandtswd" path="res://palya2.tscn" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D" unique_id=20181835]
+script = ExtResource("1_0hol4")
 
 [node name="VízHáttér" type="Sprite2D" parent="." unique_id=1051573890]
 position = Vector2(960.5, 540)
@@ -11,15 +13,24 @@ scale = Vector2(0.9379883, 0.52734375)
 texture = ExtResource("1_wtcfe")
 
 [node name="GridContainer" parent="." unique_id=162330002 instance=ExtResource("2_0e48y")]
-offset_left = 25.999998
-offset_top = 131.00002
-offset_right = 1062.0
-offset_bottom = 1167.0
+offset_left = 90.0
+offset_top = 166.0
+offset_right = 1126.0
+offset_bottom = 1202.0
 scale = Vector2(0.8, 0.8)
 
-[node name="GridContainer2" parent="." unique_id=1987178468 instance=ExtResource("2_0e48y")]
-offset_left = 1068.0
-offset_top = 131.0
-offset_right = 2104.0
-offset_bottom = 1167.0
+[node name="GridContainer2" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label") instance=ExtResource("2_0e48y")]
+offset_left = 990.0
+offset_top = 166.0
+offset_right = 2026.0
+offset_bottom = 1202.0
 scale = Vector2(0.8, 0.8)
+IsEnemyBoard = true
+JatekVezerlo = NodePath("..")
+label = NodePath("../test")
+
+[node name="test" type="Label" parent="." unique_id=260683593]
+offset_right = 28.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 100
+text = "asd"

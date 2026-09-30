@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dgj2jwandtswd"]
 
+[ext_resource type="Script" uid="uid://bwy5cpf0yb1bx" path="res://TorpedoRacs.cs" id="1_3euqa"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
 bg_color = Color(0.1680183, 0.1680183, 0.13335153, 0.5)
 border_width_left = 2
@@ -14,6 +16,7 @@ offset_top = 25.0
 offset_right = 1044.0
 offset_bottom = 1061.0
 columns = 10
+script = ExtResource("1_3euqa")
 
 [node name="Panel" type="Panel" parent="." unique_id=1671176201]
 custom_minimum_size = Vector2(100, 100)
