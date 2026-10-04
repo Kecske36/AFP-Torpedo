@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://dgj2jwandtswd" path="res://Scenes/palya2.tscn" id="2_0e48y"]
 [ext_resource type="Script" uid="uid://dhgb4yirfyv5i" path="res://Scripts/Hajo_lehelyez.cs" id="4_6whob"]
+[ext_resource type="Script" uid="uid://dajecxg1opid7" path="res://Scenes/Hajo_Interakcio.cs" id="5_u7krg"]
+[ext_resource type="Texture2D" uid="uid://drmwhfhxobsky" path="res://images/kis hajó.png" id="6_tx0tn"]
+[ext_resource type="Texture2D" uid="uid://y6iclaft60aa" path="res://images/Közepes hajó.png" id="7_wjtap"]
 
 [node name="JatekKezelo" type="Control" unique_id=778699003]
 layout_mode = 3
@@ -61,22 +64,43 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 100
 text = "asd"
 
-[node name="HajoKezelo" type="Control" parent="." unique_id=1101026093]
+[node name="HajoKezelo" type="Control" parent="." unique_id=1101026093 node_paths=PackedStringArray("Tabla")]
 anchors_preset = 0
-offset_left = 82.000015
-offset_top = 995.9999
-offset_right = 162.00002
-offset_bottom = 1075.9999
+offset_left = 33.0
+offset_top = 1006.0
+offset_right = 113.0
+offset_bottom = 1086.0
+script = ExtResource("5_u7krg")
+Tabla = NodePath("../JatekosTabla")
 
 [node name="Hajo" type="Sprite2D" parent="HajoKezelo" unique_id=1508268620]
-position = Vector2(3.999977, -840.9998)
 scale = Vector2(0.8, 0.8)
 metadata/Hajo = "1"
 
-[node name="ColorRect" type="ColorRect" parent="HajoKezelo/Hajo" unique_id=1430040641]
-custom_minimum_size = Vector2(100, 100)
-offset_left = -4.9999695
-offset_top = 1051.2498
-offset_right = 95.00003
-offset_bottom = 1151.2498
-color = Color(0.870155, 0.00049247383, 0.84759384, 1)
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo/Hajo" unique_id=875722884]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("6_tx0tn")
+expand_mode = 1
+
+[node name="HajoKezelo2" type="Control" parent="." unique_id=39846664 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 822.0
+offset_right = 89.0
+offset_bottom = 1002.0
+script = ExtResource("5_u7krg")
+Tabla = NodePath("../JatekosTabla")
+Hossz = 2
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo2" unique_id=654585922]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo2/Hajo" unique_id=1636065956]
+offset_right = 100.0
+offset_bottom = 200.0
+mouse_filter = 2
+texture = ExtResource("7_wjtap")
+expand_mode = 1
