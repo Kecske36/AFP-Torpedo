@@ -10,7 +10,6 @@ public partial class TorpedoRacs : GridContainer
 	public override void _Ready()
 	{
 		int index = 0;
-
 		foreach (Node child in GetChildren())
 		{
 			if (child is Control mezo)

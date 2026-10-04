@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://ebixvuv4jpl8" path="res://Scripts/JatekKezelo.cs" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://dgj2jwandtswd" path="res://Scenes/palya2.tscn" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://dhgb4yirfyv5i" path="res://Scripts/Hajo_lehelyez.cs" id="4_6whob"]
 
-[node name="Node2D" type="Control" unique_id=778699003]
+[node name="JatekKezelo" type="Control" unique_id=778699003]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +22,7 @@ scale = Vector2(0.9379883, 0.52734375)
 texture = ExtResource("1_wtcfe")
 expand_mode = 1
 
-[node name="GridContainer" parent="." unique_id=162330002 node_paths=PackedStringArray("JatekVezerlo") instance=ExtResource("2_0e48y")]
+[node name="JatekosTabla" parent="." unique_id=162330002 node_paths=PackedStringArray("JatekVezerlo") instance=ExtResource("2_0e48y")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -32,9 +33,10 @@ offset_right = 1122.0
 offset_bottom = 651.0
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
+script = ExtResource("4_6whob")
 JatekVezerlo = NodePath("..")
 
-[node name="GridContainer2" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label") instance=ExtResource("2_0e48y")]
+[node name="EllenfelTabla" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label") instance=ExtResource("2_0e48y")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -58,3 +60,23 @@ offset_right = 28.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 100
 text = "asd"
+
+[node name="HajoKezelo" type="Control" parent="." unique_id=1101026093]
+anchors_preset = 0
+offset_left = 82.000015
+offset_top = 995.9999
+offset_right = 162.00002
+offset_bottom = 1075.9999
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo" unique_id=1508268620]
+position = Vector2(3.999977, -840.9998)
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="ColorRect" type="ColorRect" parent="HajoKezelo/Hajo" unique_id=1430040641]
+custom_minimum_size = Vector2(100, 100)
+offset_left = -4.9999695
+offset_top = 1051.2498
+offset_right = 95.00003
+offset_bottom = 1151.2498
+color = Color(0.870155, 0.00049247383, 0.84759384, 1)
