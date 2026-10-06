@@ -28,4 +28,30 @@ public partial class JatekKezelo : Control
 		}
 
 	}
+	/*
+	public void TalaltE(bool isEnemyBoard, int x, int y, Control mezo, Label label)
+	{
+		if (!isEnemyBoard)
+		{
+			GD.Print("A saját tábládra nem lőhetsz!");
+			return;
+		}
+
+		bool talalat = TalalatKezelo.TalalatE(x, y, 3, 5);
+
+		if (talalat)
+		{
+			GD.Print("Találat!");
+			label.Text = "Találat!";
+			mezo.SelfModulate = Colors.Green;
+		}
+		else
+		{
+			GD.Print("Mellé!");
+			label.Text = "Mellé!";
+			mezo.SelfModulate = Colors.Red;
+		}
+
+		mezo.MouseFilter = Control.MouseFilterEnum.Ignore;
+	}*/
 }

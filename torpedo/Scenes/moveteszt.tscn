@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://c1fbmiw05xcrk"]
 
 [ext_resource type="Script" uid="uid://cpi2bvp5gblqb" path="res://Scripts/Player.cs" id="1_3obef"]
-[ext_resource type="Texture2D" uid="uid://boetxdj2damss" path="res://icon.svg" id="2_7mdiq"]
+[ext_resource type="Texture2D" uid="uid://dh1r5huhqpj01" path="res://images/torpedo-removebg-preview.png" id="2_3obef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pdyw"]
+size = Vector2(107, 33)
 
 [node name="Moveteszt" type="Node2D" unique_id=2055529171]
 
@@ -9,6 +12,11 @@
 script = ExtResource("1_3obef")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=393729171]
-texture = ExtResource("2_7mdiq")
+position = Vector2(1, 3)
+scale = Vector2(0.29400748, 0.29400748)
+texture = ExtResource("2_3obef")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1593146431]
+position = Vector2(1.5, 2.5)
+shape = SubResource("RectangleShape2D_6pdyw")
