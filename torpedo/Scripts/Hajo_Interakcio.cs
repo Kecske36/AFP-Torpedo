@@ -9,7 +9,7 @@ public partial class Hajo_Interakcio : Control
 	public int RacsX { get; private set; } = -1;
 	public int RacsY { get; private set; } = -1;
 
-	private bool fuggoleges;
+	private bool fuggoleges = false;
 	private bool huzasban;
 	private bool lehelyezve;
 
@@ -28,8 +28,7 @@ public partial class Hajo_Interakcio : Control
 		if (Tabla == null)
 			return;
 
-		if (Tabla.TryGetCellAtGlobalPosition(
-			GlobalPosition, out int x, out int y))
+		if (Tabla.TryGetCellAtGlobalPosition(GlobalPosition, out int x, out int y))
 		{
 			Tabla.MutatElohelyezest(x, y, Hossz, fuggoleges);
 		}
@@ -38,7 +37,6 @@ public partial class Hajo_Interakcio : Control
 			Tabla.ElojelzesTorlese();
 		}
 	}
-
 	public override void _GuiInput(InputEvent @event)
 	{
 		if (lehelyezve)
@@ -78,6 +76,9 @@ public partial class Hajo_Interakcio : Control
 		{
 			fuggoleges = !fuggoleges;
 			Rotation = fuggoleges ? Mathf.Pi / 2 : 0;
+
+			// itt a Control bal felső sarka marad a kezdőpont
+			// ne a sprite közepét használd
 			FrissitElojelzest();
 			GetViewport().SetInputAsHandled();
 			return;
@@ -88,24 +89,16 @@ public partial class Hajo_Interakcio : Control
 			!mouse.Pressed)
 		{
 			huzasban = false;
-			GetViewport().SetInputAsHandled();
 
 			if (Tabla != null &&
 				Tabla.TryGetCellAtGlobalPosition(GlobalPosition, out int x, out int y) &&
 				Tabla.Hajo_lehelyezes(x, y, Hossz, fuggoleges))
 			{
-				RacsX = x;
-				RacsY = y;
 				GlobalPosition = Tabla.GetCellGlobalPosition(x, y);
 				lehelyezve = true;
 			}
 			else
 			{
-				if (Tabla != null)
-				{
-					Tabla.ElojelzesTorlese();
-				}
-
 				GlobalPosition = elozoPozicio;
 				Rotation = elozoForgatas;
 				fuggoleges = elozoIrany;
