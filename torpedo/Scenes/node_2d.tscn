@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dajecxg1opid7" path="res://Scripts/Hajo_Interakcio.cs" id="5_wjtap"]
 [ext_resource type="Texture2D" uid="uid://drmwhfhxobsky" path="res://images/kis hajó.png" id="6_tx0tn"]
 [ext_resource type="Texture2D" uid="uid://connxhgqrmx43" path="res://images/Közepes hajó.png" id="7_wjtap"]
+[ext_resource type="Script" uid="uid://cniq8lb6hioj7" path="res://Scripts/GepHajoi.cs" id="8_v7gqg"]
 
 [node name="JatekKezelo" type="Control" unique_id=778699003]
 layout_mode = 3
@@ -230,3 +231,6 @@ expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="HajoKezelo7/Hajo" unique_id=1459219921]
 position = Vector2(49.999996, 16.25)
+
+[node name="GepHajoi" type="Node2D" parent="." unique_id=1382969762]
+script = ExtResource("8_v7gqg")

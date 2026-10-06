@@ -28,7 +28,7 @@ public partial class JatekKezelo : Control
 		}
 
 	}
-	/*
+	
 	public void TalaltE(bool isEnemyBoard, int x, int y, Control mezo, Label label)
 	{
 		if (!isEnemyBoard)
@@ -53,5 +53,5 @@ public partial class JatekKezelo : Control
 		}
 
 		mezo.MouseFilter = Control.MouseFilterEnum.Ignore;
-	}*/
+	}
 }
