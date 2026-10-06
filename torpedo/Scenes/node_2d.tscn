@@ -66,10 +66,10 @@ text = "asd"
 
 [node name="HajoKezelo" type="Control" parent="." unique_id=1101026093 node_paths=PackedStringArray("Tabla")]
 anchors_preset = 0
-offset_left = 33.0
-offset_top = 1006.0
-offset_right = 113.0
-offset_bottom = 1086.0
+offset_left = 69.0
+offset_top = 991.0
+offset_right = 149.0
+offset_bottom = 1071.0
 script = ExtResource("5_wjtap")
 Tabla = NodePath("../JatekosTabla")
 
@@ -84,15 +84,18 @@ mouse_filter = 2
 texture = ExtResource("6_tx0tn")
 expand_mode = 1
 
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo/Hajo" unique_id=746159064]
+position = Vector2(49.999996, 16.25)
+
 [node name="HajoKezelo2" type="Control" parent="." unique_id=39846664 node_paths=PackedStringArray("Tabla")]
 anchors_preset = 0
-offset_left = 314.0
-offset_top = 128.0
-offset_right = 474.0
-offset_bottom = 208.0
+offset_left = 265.0
+offset_top = 969.0
+offset_right = 425.0
+offset_bottom = 1049.0
 script = ExtResource("5_wjtap")
-Hossz = 2
 Tabla = NodePath("../JatekosTabla")
+Hossz = 2
 
 [node name="Hajo" type="Sprite2D" parent="HajoKezelo2" unique_id=654585922]
 scale = Vector2(0.8, 0.8)
@@ -104,3 +107,126 @@ offset_bottom = 100.0
 mouse_filter = 2
 texture = ExtResource("7_wjtap")
 expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo2/Hajo" unique_id=569777202]
+position = Vector2(16.249985, 50.000023)
+scale = Vector2(1.2499999, 1.2499999)
+
+[node name="HajoKezelo3" type="Control" parent="." unique_id=1573351702 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 265.0
+offset_top = 1014.0
+offset_right = 425.0
+offset_bottom = 1094.0
+script = ExtResource("5_wjtap")
+Tabla = NodePath("../JatekosTabla")
+Hossz = 2
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo3" unique_id=307638173]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo3/Hajo" unique_id=157779679]
+offset_right = 180.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("7_wjtap")
+expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo3/Hajo" unique_id=1244446154]
+position = Vector2(16.249985, 50.000023)
+scale = Vector2(1.2499999, 1.2499999)
+
+[node name="HajoKezelo4" type="Control" parent="." unique_id=1352809455 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 425.0
+offset_top = 987.0
+offset_right = 585.0
+offset_bottom = 1067.0
+script = ExtResource("5_wjtap")
+Tabla = NodePath("../JatekosTabla")
+Hossz = 2
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo4" unique_id=1783252054]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo4/Hajo" unique_id=137883323]
+offset_right = 180.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("7_wjtap")
+expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo4/Hajo" unique_id=1759314004]
+position = Vector2(16.249985, 50.000023)
+scale = Vector2(1.2499999, 1.2499999)
+
+[node name="HajoKezelo5" type="Control" parent="." unique_id=1244936711 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 125.0
+offset_top = 992.0
+offset_right = 205.0
+offset_bottom = 1072.0
+script = ExtResource("5_wjtap")
+Tabla = NodePath("../JatekosTabla")
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo5" unique_id=1511931767]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo5/Hajo" unique_id=733429549]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("6_tx0tn")
+expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo5/Hajo" unique_id=1201975792]
+position = Vector2(49.999996, 16.25)
+
+[node name="HajoKezelo6" type="Control" parent="." unique_id=1919633575 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 991.0
+offset_right = 264.0
+offset_bottom = 1071.0
+script = ExtResource("5_wjtap")
+Tabla = NodePath("../JatekosTabla")
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo6" unique_id=643644866]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo6/Hajo" unique_id=1565842400]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("6_tx0tn")
+expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo6/Hajo" unique_id=576463295]
+position = Vector2(49.999996, 16.25)
+
+[node name="HajoKezelo7" type="Control" parent="." unique_id=1680243294 node_paths=PackedStringArray("Tabla")]
+anchors_preset = 0
+offset_left = 14.0
+offset_top = 991.0
+offset_right = 94.0
+offset_bottom = 1071.0
+script = ExtResource("5_wjtap")
+Tabla = NodePath("../JatekosTabla")
+
+[node name="Hajo" type="Sprite2D" parent="HajoKezelo7" unique_id=1385373642]
+scale = Vector2(0.8, 0.8)
+metadata/Hajo = "1"
+
+[node name="Hajokinezet" type="TextureRect" parent="HajoKezelo7/Hajo" unique_id=2107286193]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("6_tx0tn")
+expand_mode = 1
+
+[node name="OrrPont" type="Marker2D" parent="HajoKezelo7/Hajo" unique_id=1459219921]
+position = Vector2(49.999996, 16.25)

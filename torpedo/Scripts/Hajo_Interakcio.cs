@@ -17,18 +17,24 @@ public partial class Hajo_Interakcio : Control
 	private Vector2 elozoPozicio;
 	private float elozoForgatas;
 	private bool elozoIrany;
+	private Sprite2D hajoRajz;
+	private Control hajoKep;
+	private Marker2D orrPont;
 
 	public override void _Ready()
 	{
 		MouseFilter = MouseFilterEnum.Stop;
 		PivotOffset = Vector2.Zero;
+		hajoRajz = GetNode<Sprite2D>("Hajo");
+		hajoKep = GetNode<Control>("Hajo/Hajokinezet");
+		orrPont = GetNode<Marker2D>("Hajo/OrrPont");
 	}
 	private void FrissitElojelzest()
 	{
 		if (Tabla == null)
 			return;
 
-		if (Tabla.TryGetCellAtGlobalPosition(GlobalPosition, out int x, out int y))
+		if (Tabla.TryGetCellAtGlobalPosition(orrPont.GlobalPosition, out int x, out int y))
 		{
 			Tabla.MutatElohelyezest(x, y, Hossz, fuggoleges);
 		}
@@ -74,13 +80,27 @@ public partial class Hajo_Interakcio : Control
 		if (@event is InputEventKey key &&
 			key.Pressed && !key.Echo && key.Keycode == Key.R)
 		{
-			fuggoleges = !fuggoleges;
-			Rotation = fuggoleges ? Mathf.Pi / 2 : 0;
+			Vector2 regiFogasiEltolas = fogasiEltolas;
 
-			// itt a Control bal felső sarka marad a kezdőpont
-			// ne a sprite közepét használd
+			fuggoleges = !fuggoleges;
+
+			float kepMagassaga = hajoKep.Size.Y * hajoRajz.Scale.Y;
+
+			Rotation = 0;
+			hajoRajz.Rotation = fuggoleges ? Mathf.Pi / 2 : 0;
+			hajoRajz.Position = fuggoleges
+				? new Vector2(kepMagassaga, 0)
+				: Vector2.Zero;
+
+			fogasiEltolas = fuggoleges
+				? new Vector2(kepMagassaga - regiFogasiEltolas.Y, regiFogasiEltolas.X)
+				: new Vector2(regiFogasiEltolas.Y, kepMagassaga - regiFogasiEltolas.X);
+
+			GlobalPosition = GetGlobalMousePosition() - fogasiEltolas;
+
 			FrissitElojelzest();
 			GetViewport().SetInputAsHandled();
+
 			return;
 		}
 
@@ -91,7 +111,7 @@ public partial class Hajo_Interakcio : Control
 			huzasban = false;
 
 			if (Tabla != null &&
-				Tabla.TryGetCellAtGlobalPosition(GlobalPosition, out int x, out int y) &&
+				Tabla.TryGetCellAtGlobalPosition(orrPont.GlobalPosition, out int x, out int y) &&
 				Tabla.Hajo_lehelyezes(x, y, Hossz, fuggoleges))
 			{
 				GlobalPosition = Tabla.GetCellGlobalPosition(x, y);
@@ -99,9 +119,17 @@ public partial class Hajo_Interakcio : Control
 			}
 			else
 			{
+				Tabla.ElojelzesTorlese();
+
 				GlobalPosition = elozoPozicio;
 				Rotation = elozoForgatas;
 				fuggoleges = elozoIrany;
+
+				float kepMagassaga = hajoKep.Size.Y * hajoRajz.Scale.Y;
+
+				hajoRajz.Rotation = elozoIrany ? Mathf.Pi / 2 : 0;
+				hajoRajz.Position = elozoIrany ? new Vector2(kepMagassaga, 0)
+				: Vector2.Zero;
 			}
 		}
 	}
