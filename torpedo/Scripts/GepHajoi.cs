@@ -25,7 +25,7 @@ public partial class GepHajoi : Node
     /// <summary>
     /// A gép összes hajóját véletlenszerűen elhelyezi a 10x10-es rácson.
     /// </summary>
-    private void HajokRandomElhelyezese()
+    public void HajokRandomElhelyezese()
     {
         hajok.Clear();
 

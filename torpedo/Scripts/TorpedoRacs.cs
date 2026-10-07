@@ -26,13 +26,13 @@ public partial class TorpedoRacs : GridContainer
 
 	private void OnMezoGuiInput(InputEvent @event, int x, int y, Control mezo)
 	{
-		if (@event is InputEventMouseButton mouseEvent 
-			&& mouseEvent.Pressed 
+		if (@event is InputEventMouseButton mouseEvent
+			&& mouseEvent.Pressed
 			&& mouseEvent.ButtonIndex == MouseButton.Left)
 		{
 			if (JatekVezerlo != null)
 			{
-				JatekVezerlo.LovesEsemeny(IsEnemyBoard, x, y, mezo, label);
+				JatekVezerlo.TalaltE(IsEnemyBoard, x, y, mezo, label);
 			}
 			else
 			{

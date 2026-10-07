@@ -3,6 +3,11 @@ using System;
 
 public partial class JatekKezelo : Control
 {
+	public override void _Ready()
+	{
+		GepHajoi gepHajoi = new GepHajoi();
+		gepHajoi.HajokRandomElhelyezese();
+	}
 	public void LovesEsemeny(bool isEnemyBoard, int x, int y, Control mezo, Label label)
 	{
 		if (!isEnemyBoard)
@@ -28,7 +33,7 @@ public partial class JatekKezelo : Control
 		}
 
 	}
-	
+
 	public void TalaltE(bool isEnemyBoard, int x, int y, Control mezo, Label label)
 	{
 		if (!isEnemyBoard)
