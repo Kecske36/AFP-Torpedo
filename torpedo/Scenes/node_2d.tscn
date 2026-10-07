@@ -62,6 +62,7 @@ label = NodePath("../test")
 layout_mode = 1
 offset_right = 28.0
 offset_bottom = 23.0
+scale = Vector2(0.7351234, 0.7351234)
 theme_override_font_sizes/font_size = 100
 text = "asd"
 
@@ -234,3 +235,223 @@ position = Vector2(49.999996, 16.25)
 
 [node name="GepHajoi" type="Node2D" parent="." unique_id=1382969762]
 script = ExtResource("8_v7gqg")
+
+[node name="Szamok" type="Control" parent="." unique_id=1317815942]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="test2" type="Label" parent="Szamok" unique_id=438267156]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 159.0
+offset_right = 76.0
+offset_bottom = 436.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "1
+"
+
+[node name="test3" type="Label" parent="Szamok" unique_id=1958956378]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 238.0
+offset_right = 79.0
+offset_bottom = 655.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "2
+
+"
+
+[node name="test4" type="Label" parent="Szamok" unique_id=1455078073]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 327.0
+offset_right = 81.0
+offset_bottom = 604.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "3"
+
+[node name="test5" type="Label" parent="Szamok" unique_id=1247821524]
+layout_mode = 0
+offset_left = 25.000002
+offset_top = 421.0
+offset_right = 82.0
+offset_bottom = 698.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "4
+"
+
+[node name="test6" type="Label" parent="Szamok" unique_id=174111941]
+layout_mode = 0
+offset_left = 25.000002
+offset_top = 509.0
+offset_right = 82.0
+offset_bottom = 786.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "5
+"
+
+[node name="test7" type="Label" parent="Szamok" unique_id=1354147885]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 579.00006
+offset_right = 82.0
+offset_bottom = 856.00006
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+
+[node name="test8" type="Label" parent="Szamok" unique_id=1723061841]
+layout_mode = 0
+offset_left = 26.000004
+offset_top = 661.0
+offset_right = 83.000015
+offset_bottom = 938.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "7"
+
+[node name="test9" type="Label" parent="Szamok" unique_id=1836521385]
+layout_mode = 0
+offset_left = 25.000004
+offset_top = 746.0
+offset_right = 82.0
+offset_bottom = 1023.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "8"
+
+[node name="test10" type="Label" parent="Szamok" unique_id=1108845674]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 828.0001
+offset_right = 83.0
+offset_bottom = 1105.0001
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "9"
+
+[node name="test11" type="Label" parent="Szamok" unique_id=111514670]
+layout_mode = 0
+offset_left = 27.000004
+offset_top = 915.0
+offset_right = 141.0
+offset_bottom = 1332.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "10
+
+"
+
+[node name="Betuk" type="Control" parent="." unique_id=2040727606]
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 159.0
+offset_right = 59.0
+offset_bottom = 199.0
+
+[node name="test2" type="Label" parent="Betuk" unique_id=1427354450]
+layout_mode = 0
+offset_left = 92.99999
+offset_top = -70.999985
+offset_right = 150.0
+offset_bottom = 206.00002
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "A"
+
+[node name="test3" type="Label" parent="Betuk" unique_id=1533762353]
+layout_mode = 0
+offset_left = 173.0
+offset_top = -70.000015
+offset_right = 239.0
+offset_bottom = 206.99998
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "B"
+
+[node name="test4" type="Label" parent="Betuk" unique_id=1247733415]
+layout_mode = 0
+offset_left = 254.0
+offset_top = -70.00002
+offset_right = 320.0
+offset_bottom = 206.99997
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "C"
+
+[node name="test5" type="Label" parent="Betuk" unique_id=1280673936]
+layout_mode = 0
+offset_left = 338.0
+offset_top = -69.00001
+offset_right = 404.0
+offset_bottom = 208.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "D"
+
+[node name="test6" type="Label" parent="Betuk" unique_id=47154745]
+layout_mode = 0
+offset_left = 415.0
+offset_top = -68.000015
+offset_right = 481.0
+offset_bottom = 208.99998
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "E"
+
+[node name="test7" type="Label" parent="Betuk" unique_id=2036978769]
+layout_mode = 0
+offset_left = 503.0
+offset_top = -67.0
+offset_right = 569.0
+offset_bottom = 210.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "F"
+
+[node name="test8" type="Label" parent="Betuk" unique_id=1709586924]
+layout_mode = 0
+offset_left = 592.0
+offset_top = -65.00001
+offset_right = 658.0
+offset_bottom = 212.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "G"
+
+[node name="test9" type="Label" parent="Betuk" unique_id=1684822984]
+layout_mode = 0
+offset_left = 668.0
+offset_top = -65.000015
+offset_right = 734.0
+offset_bottom = 211.99998
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "H"
+
+[node name="test10" type="Label" parent="Betuk" unique_id=1007051286]
+layout_mode = 0
+offset_left = 755.0
+offset_top = -66.00001
+offset_right = 821.0
+offset_bottom = 211.0
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "I"
+
+[node name="test11" type="Label" parent="Betuk" unique_id=1320241283]
+layout_mode = 0
+offset_left = 840.0
+offset_top = -68.000015
+offset_right = 906.0
+offset_bottom = 208.99998
+scale = Vector2(0.48710454, 0.48710454)
+theme_override_font_sizes/font_size = 100
+text = "J"
