@@ -8,6 +8,7 @@ public partial class GepHajoi : Node
 
     // A gép hajóinak elfoglalt mezői
     private readonly HashSet<Vector2I> hajok = new();
+    private readonly HashSet<Vector2I> talalatok = new();
 
     private readonly Random random = new();
 
@@ -15,11 +16,8 @@ public partial class GepHajoi : Node
     // 5, 4, 3, 3, 2 mező hosszúak
     private readonly int[] hajokHosszai = { 5, 4, 3, 3, 2 };
 
-
-    public override void _Ready()
-    {
-        HajokRandomElhelyezese();
-    }
+    public bool MindenHajoElsullyedt =>
+        hajok.Count > 0 && talalatok.Count == hajok.Count;
 
 
     /// <summary>
@@ -28,27 +26,55 @@ public partial class GepHajoi : Node
     public void HajokRandomElhelyezese()
     {
         hajok.Clear();
+        talalatok.Clear();
 
-        foreach (int hossz in hajokHosszai)
+        if (!HajokElhelyezese(0))
         {
-            bool sikerult = false;
+            hajok.Clear();
+            GD.PushError("A gép hajóit nem sikerült elhelyezni.");
+            return;
+        }
 
-            while (!sikerult)
+        GD.Print($"A gép hajói elhelyezve. Foglalt mezők: {hajok.Count}");
+    }
+
+    private bool HajokElhelyezese(int hajoIndex)
+    {
+        if (hajoIndex == hajokHosszai.Length)
+            return true;
+
+        int hossz = hajokHosszai[hajoIndex];
+        var lehetosegek = new List<(int x, int y, bool fuggoleges)>();
+
+        for (int y = 0; y < RacsMeret; y++)
+        {
+            for (int x = 0; x < RacsMeret; x++)
             {
-                bool fuggoleges = random.Next(0, 2) == 1;
-
-                int x = random.Next(0, RacsMeret);
-                int y = random.Next(0, RacsMeret);
-
-                if (SzabadE(x, y, hossz, fuggoleges))
-                {
-                    HajoElhelyezese(x, y, hossz, fuggoleges);
-                    sikerult = true;
-                }
+                lehetosegek.Add((x, y, false));
+                lehetosegek.Add((x, y, true));
             }
         }
 
-        GD.Print("A gép hajói véletlenszerűen elhelyezve.");
+        for (int i = lehetosegek.Count - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            (lehetosegek[i], lehetosegek[j]) = (lehetosegek[j], lehetosegek[i]);
+        }
+
+        foreach (var lehetoseg in lehetosegek)
+        {
+            if (!SzabadE(lehetoseg.x, lehetoseg.y, hossz, lehetoseg.fuggoleges))
+                continue;
+
+            HajoElhelyezese(lehetoseg.x, lehetoseg.y, hossz, lehetoseg.fuggoleges);
+
+            if (HajokElhelyezese(hajoIndex + 1))
+                return true;
+
+            HajoEltavolitasa(lehetoseg.x, lehetoseg.y, hossz, lehetoseg.fuggoleges);
+        }
+
+        return false;
     }
 
 
@@ -74,6 +100,19 @@ public partial class GepHajoi : Node
             {
                 return false;
             }
+
+            for (int szomszedY = Math.Max(0, cellaY - 1);
+                 szomszedY <= Math.Min(RacsMeret - 1, cellaY + 1);
+                 szomszedY++)
+            {
+                for (int szomszedX = Math.Max(0, cellaX - 1);
+                     szomszedX <= Math.Min(RacsMeret - 1, cellaX + 1);
+                     szomszedX++)
+                {
+                    if (hajok.Contains(new Vector2I(szomszedX, szomszedY)))
+                        return false;
+                }
+            }
         }
 
         return true;
@@ -98,13 +137,32 @@ public partial class GepHajoi : Node
         }
     }
 
+    private void HajoEltavolitasa(int x, int y, int hossz, bool fuggoleges)
+    {
+        for (int i = 0; i < hossz; i++)
+        {
+            int cellaX = x + (fuggoleges ? 0 : i);
+            int cellaY = y + (fuggoleges ? i : 0);
+
+            hajok.Remove(new Vector2I(cellaX, cellaY));
+        }
+    }
+
 
     /// <summary>
     /// Megvizsgálja, hogy a megadott mezőn van-e gépi hajó.
     /// </summary>
     public bool TalalatE(int x, int y)
     {
-        return hajok.Contains(new Vector2I(x, y));
+        if (x < 0 || x >= RacsMeret || y < 0 || y >= RacsMeret)
+            return false;
+
+        var koordinata = new Vector2I(x, y);
+        bool talalat = hajok.Contains(koordinata);
+        if (talalat)
+            talalatok.Add(koordinata);
+
+        return talalat;
     }
 
 
@@ -114,6 +172,6 @@ public partial class GepHajoi : Node
     /// </summary>
     public bool VanEHajo(int x, int y)
     {
-        return hajok.Contains(new Vector2I(x, y));
+        return TalalatE(x, y);
     }
 }

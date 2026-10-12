@@ -1,9 +1,10 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using Torpedo.Scripts;
 
 
-public partial class Hajo_lehelyez : GridContainer
+public partial class Hajo_lehelyez : Tabla
 {
     [Export] public JatekKezelo JatekVezerlo;
 
@@ -14,11 +15,32 @@ public partial class Hajo_lehelyez : GridContainer
     private readonly bool[,] foglalt = new bool[RacsMeret, RacsMeret];
 
     private readonly Dictionary<Vector2I, Color> elozoSzinek = new();
+    private readonly HashSet<Hajo_Interakcio> osszesHajo = new();
+    private readonly HashSet<Hajo_Interakcio> lerakottHajok = new();
+    private readonly HashSet<Vector2I> talalatok = new();
 
+    public bool MindenHajoLerakva =>
+        osszesHajo.Count > 0 && lerakottHajok.Count == osszesHajo.Count;
+
+    public bool MindenHajoElsullyedt
+    {
+        get
+        {
+            int hajomezokSzama = 0;
+            foreach (bool foglaltMezo in foglalt)
+            {
+                if (foglaltMezo)
+                    hajomezokSzama++;
+            }
+
+            return hajomezokSzama > 0 && talalatok.Count == hajomezokSzama;
+        }
+    }
 
 
     public override void _Ready()
     {
+        isEnemyBoard = false;
         int index = 0;
         foreach (Node child in GetChildren())
         {
@@ -60,6 +82,19 @@ public partial class Hajo_lehelyez : GridContainer
                 foglalt[cellaX, cellaY])
             {
                 return false;
+            }
+
+            for (int szomszedY = Math.Max(0, cellaY - 1);
+                 szomszedY <= Math.Min(RacsMeret - 1, cellaY + 1);
+                 szomszedY++)
+            {
+                for (int szomszedX = Math.Max(0, cellaX - 1);
+                     szomszedX <= Math.Min(RacsMeret - 1, cellaX + 1);
+                     szomszedX++)
+                {
+                    if (foglalt[szomszedX, szomszedY])
+                        return false;
+                }
             }
         }
 
@@ -122,6 +157,40 @@ public partial class Hajo_lehelyez : GridContainer
         }
 
         return true;
+    }
+
+    public void HajoRegisztralasa(Hajo_Interakcio hajo)
+    {
+        osszesHajo.Add(hajo);
+    }
+
+    public void HajoLerakva(Hajo_Interakcio hajo)
+    {
+        if (!osszesHajo.Contains(hajo))
+        {
+            GD.PushError("A lerakott hajó nincs regisztrálva a játékos tábláján.");
+            return;
+        }
+
+        lerakottHajok.Add(hajo);
+    }
+
+    public bool GepLoves(int x, int y)
+    {
+        if (x < 0 || x >= RacsMeret || y < 0 || y >= RacsMeret ||
+            mezok[x, y] == null)
+        {
+            return false;
+        }
+
+        var koordinata = new Vector2I(x, y);
+        bool talalat = foglalt[x, y];
+        if (talalat)
+            talalatok.Add(koordinata);
+
+        mezok[x, y].SelfModulate = talalat ? Colors.Red : Colors.Blue;
+        mezok[x, y].MouseFilter = Control.MouseFilterEnum.Ignore;
+        return talalat;
     }
 
     public bool TryGetCellAtGlobalPosition(Vector2 globalPosition, out int x, out int y)

@@ -1,14 +1,16 @@
 using Godot;
 using System;
+using Torpedo.Scripts;
 
-public partial class TorpedoRacs : GridContainer
+public partial class TorpedoRacs : Tabla
 {
-	[Export] public bool IsEnemyBoard = false;
 	[Export] public JatekKezelo JatekVezerlo;
 	[Export] public Label label;
+	[Export] public GepHajoi gepHajoi;
 
 	public override void _Ready()
 	{
+		isEnemyBoard = true;
 		int index = 0;
 		foreach (Node child in GetChildren())
 		{
@@ -22,6 +24,7 @@ public partial class TorpedoRacs : GridContainer
 				index++;
 			}
 		}
+		gepHajoi.HajokRandomElhelyezese();
 	}
 
 	private void OnMezoGuiInput(InputEvent @event, int x, int y, Control mezo)
@@ -30,9 +33,10 @@ public partial class TorpedoRacs : GridContainer
 			&& mouseEvent.Pressed
 			&& mouseEvent.ButtonIndex == MouseButton.Left)
 		{
+
 			if (JatekVezerlo != null)
 			{
-				JatekVezerlo.TalaltE(IsEnemyBoard, x, y, mezo, label);
+				JatekVezerlo.TalaltE(isEnemyBoard, x, y, mezo, label, gepHajoi);
 			}
 			else
 			{

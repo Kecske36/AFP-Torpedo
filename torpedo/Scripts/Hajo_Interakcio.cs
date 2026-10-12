@@ -25,6 +25,13 @@ public partial class Hajo_Interakcio : Control
 	{
 		MouseFilter = MouseFilterEnum.Stop;
 		PivotOffset = Vector2.Zero;
+		if (Tabla == null)
+		{
+			GD.PushError($"A hajó táblája nincs beállítva: {GetPath()}");
+			return;
+		}
+
+		Tabla.HajoRegisztralasa(this);
 		hajoRajz = GetNode<Sprite2D>("Hajo");
 		hajoKep = GetNode<Control>("Hajo/Hajokinezet");
 		orrPont = GetNode<Marker2D>("Hajo/OrrPont");
@@ -116,6 +123,7 @@ public partial class Hajo_Interakcio : Control
 			{
 				GlobalPosition = Tabla.GetCellGlobalPosition(x, y);
 				lehelyezve = true;
+				Tabla.HajoLerakva(this);
 			}
 			else
 			{

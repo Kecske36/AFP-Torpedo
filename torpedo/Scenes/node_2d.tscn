@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cniq8lb6hioj7" path="res://Scripts/GepHajoi.cs" id="8_v7gqg"]
 [ext_resource type="PackedScene" uid="uid://c1fbmiw05xcrk" path="res://Scenes/moveteszt.tscn" id="9_chwn1"]
 
-[node name="JatekKezelo" type="Control" unique_id=778699003]
+[node name="JatekKezelo" type="Control" unique_id=778699003 node_paths=PackedStringArray("JatekosTabla", "label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +18,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0hol4")
+JatekosTabla = NodePath("JatekosTabla")
+label = NodePath("test")
 
 [node name="VízHáttér" type="TextureRect" parent="." unique_id=322570849]
 layout_mode = 0
@@ -41,7 +43,7 @@ scale = Vector2(0.8, 0.8)
 script = ExtResource("4_6whob")
 JatekVezerlo = NodePath("..")
 
-[node name="EllenfelTabla" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label") instance=ExtResource("2_0e48y")]
+[node name="EllenfelTabla" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label", "gepHajoi") instance=ExtResource("2_0e48y")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -55,9 +57,9 @@ offset_bottom = 651.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-IsEnemyBoard = true
 JatekVezerlo = NodePath("..")
 label = NodePath("../test")
+gepHajoi = NodePath("../GepHajoi")
 
 [node name="test" type="Label" parent="." unique_id=260683593]
 layout_mode = 1
@@ -465,5 +467,8 @@ scale = Vector2(0.48710454, 0.48710454)
 theme_override_font_sizes/font_size = 100
 text = "J"
 
-[node name="Moveteszt" parent="." unique_id=2055529171 instance=ExtResource("9_chwn1")]
+[node name="Moveteszt" parent="." unique_id=2055529171 node_paths=PackedStringArray("torpedoRacs", "hajo_Lehelyez", "JatekVezerlo") instance=ExtResource("9_chwn1")]
 position = Vector2(972, 25)
+torpedoRacs = NodePath("../EllenfelTabla")
+hajo_Lehelyez = NodePath("../JatekosTabla")
+JatekVezerlo = NodePath("..")
