@@ -13,16 +13,15 @@ public partial class GepHajoi : Node
     private readonly Random random = new();
 
     // A gép hajói:
-    // 5, 4, 3, 3, 2 mező hosszúak
-    private readonly int[] hajokHosszai = { 5, 4, 3, 3, 2 };
+    // 4, 3, 3, 2, 2, 2, 1, 1, 1, 1 mező hosszúak
+    private readonly int[] hajokHosszai = { 4, 3, 3, 2, 2, 2, 1, 1, 1, 1 };
 
     public bool MindenHajoElsullyedt =>
         hajok.Count > 0 && talalatok.Count == hajok.Count;
 
 
-    /// <summary>
-    /// A gép összes hajóját véletlenszerűen elhelyezi a 10x10-es rácson.
-    /// </summary>
+
+    // A gép összes hajóját véletlenszerűen elhelyezi a 10x10-es rácson.
     public void HajokRandomElhelyezese()
     {
         hajok.Clear();
@@ -78,9 +77,9 @@ public partial class GepHajoi : Node
     }
 
 
-    /// <summary>
-    /// Megvizsgálja, hogy a hajó elfér-e az adott pozícióban.
-    /// </summary>
+
+    // Megvizsgálja, hogy a hajó elfér-e az adott pozícióban.
+
     private bool SzabadE(int x, int y, int hossz, bool fuggoleges)
     {
         for (int i = 0; i < hossz; i++)
@@ -119,9 +118,7 @@ public partial class GepHajoi : Node
     }
 
 
-    /// <summary>
-    /// A hajó mezőit hozzáadja a gép foglalt mezőihez.
-    /// </summary>
+    // A hajó mezőit hozzáadja a gép foglalt mezőihez.
     private void HajoElhelyezese(
         int x,
         int y,
@@ -149,9 +146,7 @@ public partial class GepHajoi : Node
     }
 
 
-    /// <summary>
-    /// Megvizsgálja, hogy a megadott mezőn van-e gépi hajó.
-    /// </summary>
+    // Megvizsgálja, hogy a megadott mezőn van-e gépi hajó.
     public bool TalalatE(int x, int y)
     {
         if (x < 0 || x >= RacsMeret || y < 0 || y >= RacsMeret)
@@ -166,10 +161,8 @@ public partial class GepHajoi : Node
     }
 
 
-    /// <summary>
-    /// Visszaadja, hogy a gép valamelyik hajója elfoglalja-e
-    /// a megadott mezőt.
-    /// </summary>
+    // Visszaadja, hogy a gép valamelyik hajója elfoglalja-e
+    // a megadott mezőt.
     public bool VanEHajo(int x, int y)
     {
         return TalalatE(x, y);

@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cniq8lb6hioj7" path="res://Scripts/GepHajoi.cs" id="8_v7gqg"]
 [ext_resource type="Texture2D" uid="uid://wbbeu3wc27dn" path="res://images/hajo_negy_hosszu.png" id="9_2ooml"]
 [ext_resource type="PackedScene" uid="uid://c1fbmiw05xcrk" path="res://Scenes/moveteszt.tscn" id="9_chwn1"]
+[ext_resource type="AudioStream" uid="uid://birihdf4boti5" path="res://zene/torpedo_hatterzaj.mp3" id="12_p20hg"]
 
 [node name="JatekKezelo" type="Control" unique_id=778699003 node_paths=PackedStringArray("JatekosTabla", "label")]
 layout_mode = 3
@@ -555,3 +556,9 @@ position = Vector2(972, 25)
 torpedoRacs = NodePath("../EllenfelTabla")
 hajo_Lehelyez = NodePath("../JatekosTabla")
 JatekVezerlo = NodePath("..")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=984854802]
+position = Vector2(750, 989)
+scale = Vector2(0.8, 0.8)
+stream = ExtResource("12_p20hg")
+autoplay = true
