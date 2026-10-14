@@ -15,7 +15,7 @@ public partial class Player : CharacterBody2D
     private Vector2 targetPosition;
     private bool moving = false;
 
-
+    // Kezdő értékek megadása
     public override void _Ready()
     {
         startPosition = GlobalPosition;
@@ -23,6 +23,7 @@ public partial class Player : CharacterBody2D
         targetPosition = GlobalPosition;
     }
 
+    // Egér kattintás ellenőrzése
     public override void _Input(InputEvent @event)
     {
         if (JatekVezerlo == null || JatekVezerlo.JatekVege ||
@@ -39,6 +40,7 @@ public partial class Player : CharacterBody2D
         }
     }
 
+    // Torpedó kilővése
     public override void _PhysicsProcess(double delta)
     {
         if (JatekVezerlo == null || JatekVezerlo.JatekVege ||

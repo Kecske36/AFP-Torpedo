@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1fbmiw05xcrk"]
 
-[ext_resource type="Script" uid="uid://cpi2bvp5gblqb" path="res://Scripts/Player.cs" id="1_3obef"]
+[ext_resource type="Script" uid="uid://cpi2bvp5gblqb" path="res://Scripts/Torpedo.cs" id="1_3obef"]
 [ext_resource type="Texture2D" uid="uid://dh1r5huhqpj01" path="res://images/torpedo-removebg-preview.png" id="2_3obef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pdyw"]

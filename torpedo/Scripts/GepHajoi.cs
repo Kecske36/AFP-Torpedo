@@ -4,10 +4,13 @@ using System.Collections.Generic;
 
 public partial class GepHajoi : Node
 {
+    // A tábla mérete
     private const int RacsMeret = 10;
 
     // A gép hajóinak elfoglalt mezői
     private readonly HashSet<Vector2I> hajok = new();
+
+    // Az gép hajóinak eltalált mezői 
     private readonly HashSet<Vector2I> talalatok = new();
 
     private readonly Random random = new();
@@ -16,10 +19,9 @@ public partial class GepHajoi : Node
     // 4, 3, 3, 2, 2, 2, 1, 1, 1, 1 mező hosszúak
     private readonly int[] hajokHosszai = { 4, 3, 3, 2, 2, 2, 1, 1, 1, 1 };
 
+    // Ellenőrzi, hogy a gépnak van e még hajója
     public bool MindenHajoElsullyedt =>
         hajok.Count > 0 && talalatok.Count == hajok.Count;
-
-
 
     // A gép összes hajóját véletlenszerűen elhelyezi a 10x10-es rácson.
     public void HajokRandomElhelyezese()
@@ -37,6 +39,7 @@ public partial class GepHajoi : Node
         GD.Print($"A gép hajói elhelyezve. Foglalt mezők: {hajok.Count}");
     }
 
+    // Hajók helyének ellenőrzése 
     private bool HajokElhelyezese(int hajoIndex)
     {
         if (hajoIndex == hajokHosszai.Length)

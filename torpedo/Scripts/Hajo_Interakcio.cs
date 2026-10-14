@@ -36,6 +36,8 @@ public partial class Hajo_Interakcio : Control
 		hajoKep = GetNode<Control>("Hajo/Hajokinezet");
 		orrPont = GetNode<Marker2D>("Hajo/OrrPont");
 	}
+
+	// Hajók lehelyezési mezői kiszínezése
 	private void FrissitElojelzest()
 	{
 		if (Tabla == null)
@@ -50,6 +52,8 @@ public partial class Hajo_Interakcio : Control
 			Tabla.ElojelzesTorlese();
 		}
 	}
+
+	// Hajó megfogás
 	public override void _GuiInput(InputEvent @event)
 	{
 		if (lehelyezve)
@@ -71,6 +75,7 @@ public partial class Hajo_Interakcio : Control
 		}
 	}
 
+	// Hajó forgatás, lehelyezés
 	public override void _Input(InputEvent @event)
 	{
 		if (!huzasban)

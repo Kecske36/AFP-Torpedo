@@ -12,22 +12,7 @@ public partial class JatekKezelo : Control
 
 	public bool JatekVege { get; private set; }
 
-	public void LovesEsemeny(bool isEnemyBoard, int x, int y, Control mezo, Label label)
-	{
-		if (!isEnemyBoard)
-		{
-			GD.Print("A saját tábládra nem lőhetsz!");
-			return;
-		}
-
-		GD.Print($"Lövés az ellenfél táblájára -> X: {x}, Y: {y}");
-		label.Text = $"Lövés az ellenfél táblájára -> X: {x}, Y: {y}";
-
-		// Teszt színezés:
-		mezo.SelfModulate = Colors.Red;
-		mezo.MouseFilter = Control.MouseFilterEnum.Ignore;
-	}
-
+	// Ellenörzés, hogy csak a saját táblájára tudja helyezni a játkos a hajóit
 	public void Hajo_lehelyez(bool isEnemyBoard, int x, int y, Control mezo, Control hajo, Label label)
 	{
 		if (isEnemyBoard)
@@ -38,6 +23,7 @@ public partial class JatekKezelo : Control
 
 	}
 
+	// Ellenörzés, hogy csak az ellenfél táblájára tudjon lőni
 	public void TalaltE(bool isEnemyBoard, int x, int y, Control mezo, Label label, GepHajoi gepHajoi)
 	{
 		if (JatekVege)
@@ -92,6 +78,7 @@ public partial class JatekKezelo : Control
 		GepTippel();
 	}
 
+	// Kiírja a nyertest
 	private void JatekLezar(string uzenet)
 	{
 		JatekVege = true;
@@ -100,6 +87,7 @@ public partial class JatekKezelo : Control
 			label.Text = uzenet;
 	}
 
+	// Kiírja hova tippel a gép és, hogy talált-e vagy sem
 	private void GepTippel()
 	{
 		if (JatekVege)

@@ -64,6 +64,7 @@ public partial class Hajo_lehelyez : Tabla
         }
     }
 
+    // Játékos hajóinak elhelyezésének ellenörzése
     private bool SzabadE(int x, int y, int hossz, bool fuggoleges)
     {
         if (hossz < 1 || x < 0 || y < 0 ||
@@ -101,6 +102,7 @@ public partial class Hajo_lehelyez : Tabla
         return true;
     }
 
+    // Előrejelzés szín törlése
     public void ElojelzesTorlese()
     {
         foreach (var par in elozoSzinek)
@@ -112,7 +114,7 @@ public partial class Hajo_lehelyez : Tabla
         elozoSzinek.Clear();
     }
 
-
+    // Előrejelzés szín létrehozása
     public void MutatElohelyezest(int x, int y, int hossz, bool fuggoleges)
     {
         ElojelzesTorlese();

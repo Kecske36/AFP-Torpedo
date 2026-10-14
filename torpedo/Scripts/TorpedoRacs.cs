@@ -8,6 +8,7 @@ public partial class TorpedoRacs : Tabla
 	[Export] public Label label;
 	[Export] public GepHajoi gepHajoi;
 
+	// Tábla mezői kattintás érzékelés beállítása
 	public override void _Ready()
 	{
 		isEnemyBoard = true;
@@ -27,6 +28,7 @@ public partial class TorpedoRacs : Tabla
 		gepHajoi.HajokRandomElhelyezese();
 	}
 
+	// Játékvezérlő objektum ellenőrzése
 	private void OnMezoGuiInput(InputEvent @event, int x, int y, Control mezo)
 	{
 		if (@event is InputEventMouseButton mouseEvent

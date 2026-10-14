@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://n1x4mxhumcun"]
 
-[ext_resource type="Script" uid="uid://ebixvuv4jpl8" path="res://Scripts/JatekKezelo.cs" id="1_0hol4"]
-[ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://dgj2jwandtswd" path="res://Scenes/palya2.tscn" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://dhgb4yirfyv5i" path="res://Scripts/Hajo_lehelyez.cs" id="4_6whob"]
-[ext_resource type="Script" uid="uid://dajecxg1opid7" path="res://Scripts/Hajo_Interakcio.cs" id="5_wjtap"]
-[ext_resource type="Texture2D" uid="uid://drmwhfhxobsky" path="res://images/kis hajó.png" id="6_tx0tn"]
-[ext_resource type="Texture2D" uid="uid://connxhgqrmx43" path="res://images/Közepes hajó.png" id="7_wjtap"]
-[ext_resource type="Texture2D" uid="uid://m506gq4e65kt" path="res://images/harom_hosszu_hajo.png" id="8_hvaui"]
-[ext_resource type="Script" uid="uid://cniq8lb6hioj7" path="res://Scripts/GepHajoi.cs" id="8_v7gqg"]
-[ext_resource type="Texture2D" uid="uid://wbbeu3wc27dn" path="res://images/hajo_negy_hosszu.png" id="9_2ooml"]
-[ext_resource type="PackedScene" uid="uid://c1fbmiw05xcrk" path="res://Scenes/moveteszt.tscn" id="9_chwn1"]
-[ext_resource type="AudioStream" uid="uid://birihdf4boti5" path="res://zene/torpedo_hatterzaj.mp3" id="12_p20hg"]
+[ext_resource type="Script" uid="uid://ebixvuv4jpl8" path="res://Scripts/JatekKezelo.cs" id="1_t3gsx"]
+[ext_resource type="Texture2D" uid="uid://c0asj7kscwpki" path="res://images/víz háttér.png" id="2_bt64n"]
+[ext_resource type="PackedScene" uid="uid://dgj2jwandtswd" path="res://Scenes/tabla.tscn" id="3_tvcph"]
+[ext_resource type="Script" uid="uid://dhgb4yirfyv5i" path="res://Scripts/Hajo_lehelyez.cs" id="4_x6s2w"]
+[ext_resource type="Script" uid="uid://dajecxg1opid7" path="res://Scripts/Hajo_Interakcio.cs" id="5_hausg"]
+[ext_resource type="Texture2D" uid="uid://drmwhfhxobsky" path="res://images/kis hajó.png" id="6_mtaoe"]
+[ext_resource type="Texture2D" uid="uid://connxhgqrmx43" path="res://images/Közepes hajó.png" id="7_bmdws"]
+[ext_resource type="Texture2D" uid="uid://m506gq4e65kt" path="res://images/harom_hosszu_hajo.png" id="8_043n3"]
+[ext_resource type="Texture2D" uid="uid://wbbeu3wc27dn" path="res://images/hajo_negy_hosszu.png" id="9_bghpb"]
+[ext_resource type="Script" uid="uid://cniq8lb6hioj7" path="res://Scripts/GepHajoi.cs" id="10_opgvs"]
+[ext_resource type="PackedScene" uid="uid://c1fbmiw05xcrk" path="res://Scenes/moveteszt.tscn" id="11_4tas4"]
+[ext_resource type="AudioStream" uid="uid://birihdf4boti5" path="res://zene/torpedo_hatterzaj.mp3" id="12_2fwiv"]
 
 [node name="JatekKezelo" type="Control" unique_id=778699003 node_paths=PackedStringArray("JatekosTabla", "label")]
 layout_mode = 3
@@ -20,19 +20,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0hol4")
+script = ExtResource("1_t3gsx")
 JatekosTabla = NodePath("JatekosTabla")
-label = NodePath("test")
+label = NodePath("Kiiras")
 
 [node name="VízHáttér" type="TextureRect" parent="." unique_id=322570849]
 layout_mode = 0
 offset_right = 2048.0
 offset_bottom = 2048.0
 scale = Vector2(0.9379883, 0.52734375)
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("2_bt64n")
 expand_mode = 1
 
-[node name="JatekosTabla" parent="." unique_id=162330002 node_paths=PackedStringArray("JatekVezerlo") instance=ExtResource("2_0e48y")]
+[node name="JatekosTabla" parent="." unique_id=162330002 node_paths=PackedStringArray("JatekVezerlo") instance=ExtResource("3_tvcph")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -43,10 +43,10 @@ offset_right = 1122.0
 offset_bottom = 651.0
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-script = ExtResource("4_6whob")
+script = ExtResource("4_x6s2w")
 JatekVezerlo = NodePath("..")
 
-[node name="EllenfelTabla" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label", "gepHajoi") instance=ExtResource("2_0e48y")]
+[node name="EllenfelTabla" parent="." unique_id=1987178468 node_paths=PackedStringArray("JatekVezerlo", "label", "gepHajoi") instance=ExtResource("3_tvcph")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -61,10 +61,10 @@ grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 JatekVezerlo = NodePath("..")
-label = NodePath("../test")
+label = NodePath("../Kiiras")
 gepHajoi = NodePath("../GepHajoi")
 
-[node name="test" type="Label" parent="." unique_id=260683593]
+[node name="Kiiras" type="Label" parent="." unique_id=260683593]
 layout_mode = 1
 offset_right = 28.0
 offset_bottom = 23.0
@@ -80,7 +80,7 @@ offset_left = 69.0
 offset_top = 991.0
 offset_right = 149.0
 offset_bottom = 1071.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 
 [node name="Hajo" type="Sprite2D" parent="Jatekos Hajok/HajoKezelo" unique_id=1508268620]
@@ -91,7 +91,7 @@ metadata/Hajo = "1"
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("6_tx0tn")
+texture = ExtResource("6_mtaoe")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo/Hajo" unique_id=746159064]
@@ -104,7 +104,7 @@ offset_left = 265.0
 offset_top = 969.0
 offset_right = 425.0
 offset_bottom = 1049.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 2
 
@@ -116,7 +116,7 @@ metadata/Hajo = "1"
 offset_right = 180.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("7_wjtap")
+texture = ExtResource("7_bmdws")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo2/Hajo" unique_id=569777202]
@@ -130,7 +130,7 @@ offset_left = 265.0
 offset_top = 1014.0
 offset_right = 425.0
 offset_bottom = 1094.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 2
 
@@ -142,7 +142,7 @@ metadata/Hajo = "1"
 offset_right = 180.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("7_wjtap")
+texture = ExtResource("7_bmdws")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo3/Hajo" unique_id=1244446154]
@@ -156,7 +156,7 @@ offset_left = 408.0
 offset_top = 968.0
 offset_right = 568.0
 offset_bottom = 1048.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 2
 
@@ -168,7 +168,7 @@ metadata/Hajo = "1"
 offset_right = 180.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("7_wjtap")
+texture = ExtResource("7_bmdws")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo4/Hajo" unique_id=1759314004]
@@ -182,7 +182,7 @@ offset_left = 125.0
 offset_top = 992.0
 offset_right = 205.0
 offset_bottom = 1072.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 
 [node name="Hajo" type="Sprite2D" parent="Jatekos Hajok/HajoKezelo5" unique_id=1511931767]
@@ -193,7 +193,7 @@ metadata/Hajo = "1"
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("6_tx0tn")
+texture = ExtResource("6_mtaoe")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo5/Hajo" unique_id=1201975792]
@@ -206,7 +206,7 @@ offset_left = 184.0
 offset_top = 991.0
 offset_right = 264.0
 offset_bottom = 1071.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 
 [node name="Hajo" type="Sprite2D" parent="Jatekos Hajok/HajoKezelo6" unique_id=643644866]
@@ -217,7 +217,7 @@ metadata/Hajo = "1"
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("6_tx0tn")
+texture = ExtResource("6_mtaoe")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo6/Hajo" unique_id=576463295]
@@ -230,7 +230,7 @@ offset_left = 14.0
 offset_top = 991.0
 offset_right = 94.0
 offset_bottom = 1071.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 
 [node name="Hajo" type="Sprite2D" parent="Jatekos Hajok/HajoKezelo7" unique_id=1385373642]
@@ -241,7 +241,7 @@ metadata/Hajo = "1"
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
-texture = ExtResource("6_tx0tn")
+texture = ExtResource("6_mtaoe")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo7/Hajo" unique_id=1459219921]
@@ -254,7 +254,7 @@ offset_left = 360.0
 offset_top = 1012.0
 offset_right = 600.0
 offset_bottom = 1092.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 3
 
@@ -268,7 +268,7 @@ offset_top = 1.2499999
 offset_right = 251.25
 offset_bottom = 101.25
 mouse_filter = 2
-texture = ExtResource("8_hvaui")
+texture = ExtResource("8_043n3")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo8/Hajo" unique_id=1727805781]
@@ -281,7 +281,7 @@ offset_left = 502.0
 offset_top = 987.0
 offset_right = 742.0
 offset_bottom = 1067.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 3
 
@@ -295,7 +295,7 @@ offset_top = 1.2499999
 offset_right = 251.25
 offset_bottom = 101.25
 mouse_filter = 2
-texture = ExtResource("8_hvaui")
+texture = ExtResource("8_043n3")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo9/Hajo" unique_id=1240365279]
@@ -308,7 +308,7 @@ offset_left = 693.0
 offset_top = 988.0
 offset_right = 933.0
 offset_bottom = 1068.0
-script = ExtResource("5_wjtap")
+script = ExtResource("5_hausg")
 Tabla = NodePath("../../JatekosTabla")
 Hossz = 4
 
@@ -322,14 +322,14 @@ offset_top = 1.2499999
 offset_right = 391.25
 offset_bottom = 101.25
 mouse_filter = 2
-texture = ExtResource("9_2ooml")
+texture = ExtResource("9_bghpb")
 expand_mode = 1
 
 [node name="OrrPont" type="Marker2D" parent="Jatekos Hajok/HajoKezelo10/Hajo" unique_id=1325350821]
 position = Vector2(73.74999, 49.999996)
 
 [node name="GepHajoi" type="Node2D" parent="." unique_id=1382969762]
-script = ExtResource("8_v7gqg")
+script = ExtResource("10_opgvs")
 
 [node name="Szamok" type="Control" parent="." unique_id=1317815942]
 anchors_preset = 0
@@ -551,7 +551,7 @@ scale = Vector2(0.48710454, 0.48710454)
 theme_override_font_sizes/font_size = 100
 text = "J"
 
-[node name="Moveteszt" parent="." unique_id=2055529171 node_paths=PackedStringArray("torpedoRacs", "hajo_Lehelyez", "JatekVezerlo") instance=ExtResource("9_chwn1")]
+[node name="Moveteszt" parent="." unique_id=2055529171 node_paths=PackedStringArray("torpedoRacs", "hajo_Lehelyez", "JatekVezerlo") instance=ExtResource("11_4tas4")]
 position = Vector2(972, 25)
 torpedoRacs = NodePath("../EllenfelTabla")
 hajo_Lehelyez = NodePath("../JatekosTabla")
@@ -560,5 +560,5 @@ JatekVezerlo = NodePath("..")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=984854802]
 position = Vector2(750, 989)
 scale = Vector2(0.8, 0.8)
-stream = ExtResource("12_p20hg")
+stream = ExtResource("12_2fwiv")
 autoplay = true
